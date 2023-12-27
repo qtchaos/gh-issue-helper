@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Issue Helper",
+  "version": "1.0",
+  "description": "GitHub Issue Helper is a browser extension that helps you manage GitHub issues with ease.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "64": "assets/icon-64.png",
+    "96": "assets/icon-96.png",
+    "128": "assets/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*/issues*"],
+      "js": ["content.bundle.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{97941b91-77d8-4b88-8e36-11077572a08b}",
+      "strict_min_version": "79.0"
+    }
+  }
+}

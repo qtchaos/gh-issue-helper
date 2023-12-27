@@ -1,0 +1,20 @@
+{
+  "name": "gh-issue-helper",
+  "version": "1.0.0",
+  "description": "GitHub Issue Helper is a browser extension that helps you manage GitHub issues with ease.",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:zip": "webpack --mode=production && web-ext build --source-dir dist --overwrite-dest",
+    "watch": "webpack --mode=development --watch",
+    "start": "web-ext run --source-dir dist --firefox-profile default-release"
+  },
+  "author": "qtchaos",
+  "homepage": "https://github.com/qtchaos/gh-issue-helper",
+  "license": "GNU GPLv3",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "web-ext-plugin": "^2.9.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
